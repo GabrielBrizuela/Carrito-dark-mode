@@ -1,14 +1,14 @@
 document.getElementById('id-sun').onclick = function () {
     document.getElementById('page').classList.remove('dark-mode')
     document.getElementById('id-moon').classList.remove('active')
-    localStorage.setItem("darkModeOff", "id-sun")
+    localStorage.setItem("darkMode", "off")
     this.classList.add('active')
 }
 
 document.getElementById('id-moon').onclick = function () {
     document.getElementById('page').classList.add('dark-mode')
     document.getElementById('id-sun').classList.remove('active')
-    localStorage.setItem("darkModeOn", "id-moon")
+    localStorage.setItem("darkMode", "on")
     this.classList.add('active')
 }
 
@@ -30,6 +30,6 @@ function page(e) {
 const darkModeStatus = localStorage.getItem("dark-mode");
 
 if (darkModeStatus == "on") {
-    switchDark.checked = true;
+    switchDark.checked = false;
     darkModeOn();
 }

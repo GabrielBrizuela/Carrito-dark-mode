@@ -24,7 +24,7 @@ function sincronizarStorage() {
 const productoCardContainer = document.querySelector(`.container-carrito`)
 
 function addToCardclicked(event) {
-    //event.preventDafult();
+   
     const button = event.target;
     const item = button.closest(`.cardProducto`)
     const itemProducto = item.querySelector(`.cardProduct__description`).textContent;
@@ -126,6 +126,7 @@ function quantityChanged(event) {
 }
 
 function comprarButtonClicked(event){
+     event.preventDafult();
     productoCardContainer.innerHTML = '';
     updateShoppingCartTotal();
            
